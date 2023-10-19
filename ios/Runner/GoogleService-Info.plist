@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBOGnKbsu9R6HYmSIRb-OIJmP4Y5LJgJDs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>606335402102</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bestie.tastes</string>
+	<key>PROJECT_ID</key>
+	<string>project1db-ec5e8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>project1db-ec5e8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:606335402102:ios:f52b684312f5a7d0505f57</string>
+</dict>
+</plist>

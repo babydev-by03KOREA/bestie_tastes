@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "606335402102",
+    "project_id": "project1db-ec5e8",
+    "storage_bucket": "project1db-ec5e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606335402102:android:ae4852e138b5879f505f57",
+        "android_client_info": {
+          "package_name": "com.bestie.tastes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP82BL3E3i0fHa4rHRYIISfD_FcUOZ7ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
