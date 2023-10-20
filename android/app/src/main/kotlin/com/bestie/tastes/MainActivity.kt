@@ -1,4 +1,4 @@
-package com.taste.atlas.taste_atlas
+package com.bestie.tastes
 
 import io.flutter.embedding.android.FlutterActivity
 

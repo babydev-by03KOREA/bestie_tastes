@@ -4,6 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:bestie_tastes/home/index.dart';
 import 'package:bestie_tastes/location/index.dart';
 import 'package:bestie_tastes/wishlist/index.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: '.env');
@@ -32,45 +33,16 @@ class _MainWidgetState extends State<MainWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Container(
-          height: 45.0,
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-          decoration: BoxDecoration(
-            color: Colors.grey[200],
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.search, color: Colors.black),
-              const SizedBox(width: 8),
-              Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Search..',
-                    border: InputBorder.none,
-                    hintStyle: TextStyle(color: Colors.black.withOpacity(0.5)),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 5),
-                  ),
-                  style: const TextStyle(color: Colors.black, fontSize: 16),
-                ),
-              ),
-            ],
-          ),
+      body: SafeArea(
+        child: PageView(
+          controller: pageController,
+          onPageChanged: (index) {
+            setState(() {
+              pageIndex = index;
+            });
+          },
+          children: pages,
         ),
-        actions: const <Widget>[],
-        iconTheme: const IconThemeData(color: Colors.black),
-      ),
-      body: PageView(
-        controller: pageController,
-        onPageChanged: (index) {
-          setState(() {
-            pageIndex = index;
-          });
-        },
-        children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (value) {
@@ -81,10 +53,10 @@ class _MainWidgetState extends State<MainWidget> {
         },
         currentIndex: pageIndex,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+          BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.houseChimney), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.my_location), label: 'location'),
-          BottomNavigationBarItem(icon: Icon(Icons.add_box), label: 'wishlist'),
+              icon: FaIcon(FontAwesomeIcons.mapLocationDot), label: 'Location'),
+          BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.solidUser), label: 'Account'),
         ],
       ),
     );
